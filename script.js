@@ -17,25 +17,21 @@
     }
 
     const person = {
-  firstName: "Sakina",
-  favoriteFood: "Jerk chicken & rice and peas"
+  firstName: firstNameInput.value,
+  favoriteFood: favoriteFoodInput.value,
 };
 
 console.log(person);
 
 const personString = JSON.stringify(person);
 
-console.log(personString);
-const person = {
-  firstName: "John",
-  favoriteFood: "Pizza"
-};
+console.log(personString)
 
-console.log(person);
-console.log(personString);
 
-xhttp.open("GET", "http://100.66.169.151. ", true);
+
+xhttp.open("POST", "http://100.66.169.122:3000/chat", true);
 xhttp.setRequestHeader("Content-Type", "application/json");
+xhttp.send(JSON.stringify(person));
 
 });
     
